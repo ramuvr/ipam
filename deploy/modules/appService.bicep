@@ -202,7 +202,7 @@ resource diagnosticSettingsApp 'Microsoft.Insights/diagnosticSettings@2021-05-01
   properties: {
     logs: [
       {
-        category: 'AppServiceAntivirusScanAuditLogs'
+        category: 'AppServiceAuthenticationLogs'
         enabled: true
         retentionPolicy: {
           days: 0
@@ -227,14 +227,6 @@ resource diagnosticSettingsApp 'Microsoft.Insights/diagnosticSettings@2021-05-01
       }
       {
         category: 'AppServiceAppLogs'
-        enabled: true
-        retentionPolicy: {
-          days: 0
-          enabled: false
-        }
-      }
-      {
-        category: 'AppServiceFileAuditLogs'
         enabled: true
         retentionPolicy: {
           days: 0
