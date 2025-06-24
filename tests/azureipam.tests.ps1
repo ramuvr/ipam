@@ -340,7 +340,7 @@ Context 'Networks' {
     $script:newNetA = New-AzVirtualNetwork `
       -Name 'TestVNet01' `
       -ResourceGroupName $env:IPAM_RESOURCE_GROUP `
-      -Location 'westus3' `
+      -Location 'eastus3' `
       -AddressPrefix '10.1.0.0/24'
 
     Start-Sleep -Seconds 60
@@ -361,7 +361,7 @@ Context 'Networks' {
     $script:newNetB = New-AzVirtualNetwork `
       -Name 'TestVNet02' `
       -ResourceGroupName $env:IPAM_RESOURCE_GROUP `
-      -Location 'westus3' `
+      -Location 'eastus3' `
       -AddressPrefix '10.1.1.0/24'
 
     Start-Sleep -Seconds 60
@@ -844,7 +844,7 @@ Context 'Reservations' {
     $script:newNetC = New-AzVirtualNetwork `
       -Name 'TestVNet03' `
       -ResourceGroupName $env:IPAM_RESOURCE_GROUP `
-      -Location 'westus3' `
+      -Location 'eastus3' `
       -AddressPrefix $script:reservationA.Cidr `
       -Tag @{ "X-IPAM-RES-ID" = $script:reservationA.Id }
 
@@ -981,7 +981,7 @@ Context 'Tools' {
     $script:toolsNet = New-AzVirtualNetwork `
       -Name 'ToolsNet' `
       -ResourceGroupName $env:IPAM_RESOURCE_GROUP `
-      -Location 'westus3' `
+      -Location 'eastus3' `
       -AddressPrefix '198.51.100.0/24'
 
     Start-Sleep -Seconds 60

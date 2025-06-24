@@ -1,4 +1,4 @@
-location      = "westus3"
+location      = "eastus3"
 rg_name       = "rg-network"
 vnet_name     = "ipam-net"
 vnet_size     = 24

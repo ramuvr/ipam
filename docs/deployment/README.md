@@ -126,7 +126,7 @@ PS /ipam/deploy> .\deploy.ps1 <OPTIONS>
 To deploy the full solution, run the following from within the `deploy` directory:
 
 ```powershell
-./deploy.ps1 -Location "westus3" 
+./deploy.ps1 -Location "eastus3" 
  ```
 
 You have the ability to pass optional flags to the deployment script:
@@ -155,7 +155,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -UIAppName "my-ui-app-reg" `
   -EngineAppName "my-engine-app-reg"
 ```
@@ -164,7 +164,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -NamePrefix "devipam"
 ```
 
@@ -172,7 +172,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -Tags @{owner = 'ipamadmin@example.com'; environment = 'development'}
 ```
 
@@ -180,7 +180,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -Function
 ```
 
@@ -188,7 +188,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -PrivateACR
 ```
 
@@ -208,7 +208,7 @@ $ResourceNames = @{
 }
 
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ResourceNames $ResourceNames
 ```
 
@@ -229,7 +229,7 @@ $ResourceNames = @{
 }
 
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ResourceNames $ResourceNames `
   -PrivateACR
 ```
@@ -251,7 +251,7 @@ $ResourceNames = @{
 }
 
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ResourceNames $ResourceNames
   -Function
 ```
@@ -302,7 +302,7 @@ Once your parameters file is ready, run the following from within the `deploy` d
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ParameterFile ./main.parameters.json
  ```
 
@@ -326,7 +326,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ParameterFile ./main.parameters.json `
   -NamePrefix "devipam"
 ```
@@ -335,7 +335,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ParameterFile ./main.parameters.json `
   -Tags @{owner = 'ipamadmin@example.com'; environment = 'development'}
 ```
@@ -344,7 +344,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ParameterFile ./main.parameters.json `
   -Function
 ```
@@ -353,7 +353,7 @@ You have the ability to pass optional flags to the deployment script:
 
 ```powershell
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ParameterFile ./main.parameters.json `
   -PrivateACR
 ```
@@ -374,7 +374,7 @@ $ResourceNames = @{
 }
 
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ParameterFile ./main.parameters.json `
   -ResourceNames $ResourceNames
 ```
@@ -396,7 +396,7 @@ $ResourceNames = @{
 }
 
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ParameterFile ./main.parameters.json `
   -ResourceNames $ResourceNames `
   -PrivateACR
@@ -419,7 +419,7 @@ $ResourceNames = @{
 }
 
 ./deploy.ps1 `
-  -Location "westus3" `
+  -Location "eastus3" `
   -ParameterFile ./main.parameters.json `
   -ResourceNames $ResourceNames `
   -Function

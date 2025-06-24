@@ -50,13 +50,13 @@ var runFromPackage = azureCloud == 'AZURE_US_GOV_SECRET' ? true : false
 var engineVersion = loadJsonContent('../../engine/app/version.json')
 var pythonVersion = engineVersion.python
 
-resource appServicePlan 'Microsoft.Web/serverfarms@2021-02-01' = {
+resource appServicePlan 'Microsoft.Web/serverfarms@2024-11-01' = {
   name: appServicePlanName
   location: location
   sku: {
-    name: 'P1v3'
-    size: 'P1v3'
-    tier: 'PremiumV3'
+    name: 'S1'
+    size: 'S1'
+    tier: 'Standard'
     capacity: 1
   }
   kind: 'linux'
@@ -65,7 +65,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2021-02-01' = {
   }
 }
 
-resource appService 'Microsoft.Web/sites@2021-02-01' = {
+resource appService 'Microsoft.Web/sites@2024-11-01' = {
   name: appServiceName
   location: location
   kind: deployAsContainer ? 'app,linux,container' : 'app,linux'

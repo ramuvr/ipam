@@ -65,7 +65,7 @@ jobs:
         working-directory: deploy
         id: deployScript
         shell: pwsh
-        run: ./deploy.ps1 -Location "westus3" -UIAppName $env:IPAM_UI_NAME -EngineAppName $env:IPAM_ENGINE_NAME
+        run: ./deploy.ps1 -Location "eastus3" -UIAppName $env:IPAM_UI_NAME -EngineAppName $env:IPAM_ENGINE_NAME
 
       - name: "Upload Logs"
         working-directory: logs
