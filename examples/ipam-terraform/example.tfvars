@@ -1,4 +1,4 @@
-location      = "eastus3"
+location      = "eastus"
 rg_name       = "rg-network"
 vnet_name     = "ipam-net"
 vnet_size     = 24
